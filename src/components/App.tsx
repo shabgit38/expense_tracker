@@ -1,18 +1,20 @@
 import { useState } from "react";
 import { NavBar } from "./NavBar";
-import { TransactionList } from "./TransactionList";
+import { DetailedTransactionList } from "./DetailedTransactionList";
+import { ConsolidationView } from "./ConsolidationView";
 import { MonthlySummary } from "./MonthlySummary";
 import { ExpenseStoreProvider } from "../state/useExpenseStore";
 import "./styles/App.css";
 
 export function App() {
-  const [currentView, setCurrentView] = useState<"transactions" | "dashboard">("transactions");
+  const [currentView, setCurrentView] = useState<"transactions" | "consolidation" | "dashboard">("transactions");
   return (
     <ExpenseStoreProvider>
       <div className="app">
         <NavBar currentView={currentView} onViewChange={setCurrentView} />
         <main className="main-content">
-          {currentView === "transactions" && <TransactionList />}
+          {currentView === "transactions" && <DetailedTransactionList />}
+          {currentView === "consolidation" && <ConsolidationView />}
           {currentView === "dashboard" && <MonthlySummary />}
         </main>
         <footer className="app-footer">

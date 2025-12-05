@@ -1,0 +1,109 @@
+.consolidation-view {
+  padding: 24px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.consolidation-view h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.consolidation-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.consolidation-table thead {
+  background-color: #f0f1f3;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.consolidation-table th {
+  padding: 12px 8px;
+  text-align: right;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+.consolidation-table th:first-child {
+  text-align: left;
+  min-width: 150px;
+}
+
+.consolidation-table tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+.consolidation-table tbody tr:hover {
+  background-color: #fafbfc;
+}
+
+.consolidation-table td {
+  padding: 12px 8px;
+  text-align: right;
+}
+
+.consolidation-table .category-cell {
+  text-align: left;
+  font-weight: 500;
+  color: #333;
+}
+
+.consolidation-table .amount-cell {
+  color: #1a1a1a;
+  font-family: "Courier New", monospace;
+}
+
+.consolidation-table .total-cell {
+  font-weight: 600;
+  background-color: #f5f6f7;
+}
+
+.consolidation-table .total-col {
+  background-color: #f5f6f7;
+  font-weight: 600;
+}
+
+.consolidation-table .total-row {
+  background-color: #f0f1f3;
+  border-top: 2px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0;
+  font-weight: 700;
+}
+
+.consolidation-table .total-row .category-cell {
+  color: #1a1a1a;
+}
+
+.consolidation-table .total-row .amount-cell {
+  color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+  .consolidation-view {
+    padding: 16px;
+  }
+
+  .consolidation-table {
+    font-size: 12px;
+  }
+
+  .consolidation-table th,
+  .consolidation-table td {
+    padding: 8px 4px;
+  }
+}
