@@ -29,8 +29,16 @@ export function ExpenseStoreProvider({ children }: { children: React.ReactNode }
     setTransactions(transactions.filter((txn) => txn.id !== id));
   };
 
+  const storeValue = {
+    transactions,
+    categories,
+    addTransaction,
+    updateTransaction,
+    deleteTransaction,
+  };
+
   return (
-    <ExpenseStoreContext.Provider value={{ transactions, categories, addTransaction, updateTransaction, deleteTransaction }}>
+    <ExpenseStoreContext.Provider value={storeValue}>
       {children}
     </ExpenseStoreContext.Provider>
   );
